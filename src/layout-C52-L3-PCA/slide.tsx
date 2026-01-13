@@ -95,16 +95,16 @@ const Slide = () => {
     <div className="min-h-screen bg-[#F8FAFC] flex justify-center items-center p-5 flex-col gap-5">
       <div>
         <h4 className="text-3xl font-bold text-center text-black">
-          {activeSlide === 0 ? "Ask" : "Suggestive responses"}
+          {activeSlide === 0 ? "Ask about Credit Card" : "Suggestive responses"}
         </h4>
 
-        {/* <p className="text-black text-lg ">
+        <p className="text-black text-lg ">
           {activeSlide === 0
-            ? "Pick five items in your room that you’d like to sell. "
+            ? "Prepare a list of questions to ask your parents or an adult with a credit card."
             : activeSlide === 1
-            ? " Enter your responses in the following table. You can price items at 5, 10, and 15. Make sure to give reasons. "
+            ? ""
             : ""}
-        </p> */}
+        </p>
       </div>
 
       <div className="w-[90%] flex justify-center items-center flex-col gap-3">
@@ -122,6 +122,26 @@ const Slide = () => {
             {/* SLIDE 0 */}
             <SwiperSlide>
               <div className="grid grid-cols-12 place-items-center w-full gap-5 p-3 ">
+                <div className="col-span-12 w-1/2 flex justify-center flex-col items-center  gap-1 ">
+                  <ul className="list-disc w-full space-y-3">
+                    {suggestionData.map((i, index) => (
+                      <li key={index} className="text-black text-lg ">
+                        {i}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <p className="text-red-400 text-left px-3 w-full font-bold ">
+                    {errorMsg}
+                  </p>
+                </div>
+                
+                <div className="col-span-12 w-1/2 flex justify-center flex-col items-center  gap-1 ">
+                 
+<h4 className="text-black text-lg font-bold">Add your questions as well!</h4>
+                 
+                </div>
+                
                 <div className="col-span-12 w-1/2 flex justify-center flex-col items-center  gap-1 ">
                   <div className="flex justify-center items-center gap-2">
                     <textarea
@@ -181,19 +201,7 @@ const Slide = () => {
               </div>
             </SwiperSlide>
 
-            <SwiperSlide>
-              <div className="grid grid-cols-12 place-items-center w-full gap-5 p-3 ">
-                <div className="col-span-12 w-1/2 flex justify-center items-center flex-col gap-5 ">
-                  <ul className="list-disc w-full space-y-3">
-                    {suggestionData.map((i, index) => (
-                      <li key={index} className="text-black text-lg ">
-                        {i}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </SwiperSlide>
+           
           </Swiper>
         </div>
 
@@ -211,7 +219,7 @@ const Slide = () => {
           <span
             onClick={handleNext}
             className={`${
-              activeSlide < 1 && show ? "visible" : "invisible"
+              activeSlide < 0 && show ? "visible" : "invisible"
             } cursor-pointer text-black text-4xl border border-black rounded-full p-3 bg-yellow-400`}
           >
             <FaArrowRight />

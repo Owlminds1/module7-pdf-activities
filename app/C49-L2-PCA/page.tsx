@@ -51,7 +51,7 @@ const Page = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#CAE199] flex justify-center items-center p-5 flex-col">
+    <div className="min-h-screen bg-[#fff] flex justify-center items-center p-5 flex-col">
       <div>
         <h2 className="font-bold text-4xl text-black">Cup of kindness</h2>
       </div>
@@ -62,7 +62,7 @@ const Page = () => {
           name="Monday"
           onChange={handleChange}
           placeholder="Monday"
-          className="absolute min-w-[250px] p-2 text-black backdrop-blur-lg
+          className="absolute border min-w-[250px] p-2 text-black backdrop-blur-lg
             bottom-[10%] min-h-[50px] left-[40%] rounded-b-full z-10"
         />
 
@@ -70,39 +70,39 @@ const Page = () => {
           name="Tuesday"
           onChange={handleChange}
           placeholder="Tuesday"
-          className="absolute min-w-[275px] p-2 text-black backdrop-blur-lg
-            bottom-[19%] min-h-[50px] left-[39%] rounded-[10px] z-10"
+          className="absolute border min-w-[290px] p-2 text-black backdrop-blur-lg
+            bottom-[19%] min-h-[50px] left-[39%] rounded-b-[40px] z-10"
         />
 
         <input
           name="Wednesday"
           onChange={handleChange}
           placeholder="Wednesday"
-          className="absolute min-w-[280px] p-2 text-black backdrop-blur-lg
-            bottom-[28%] min-h-[50px] left-[39%] rounded-[10px] z-10"
+          className="absolute border min-w-[320px] p-2 text-black backdrop-blur-lg
+            bottom-[28%] min-h-[50px] left-[38%] rounded-b-[40px] z-10"
         />
 
         <input
           name="Thursday"
           onChange={handleChange}
           placeholder="Thursday"
-          className="absolute min-w-[280px] p-2 text-black backdrop-blur-lg
-            bottom-[36%] min-h-[50px] left-[39%] rounded-[10px] z-10"
+          className="absolute border min-w-[330px] p-2 text-black backdrop-blur-lg
+            bottom-[36%] min-h-[50px] left-[38%] rounded-b-[40px] z-10"
         />
 
         <input
           name="Friday"
           onChange={handleChange}
           placeholder="Friday"
-          className="absolute min-w-[295px] p-2 text-black backdrop-blur-lg
-            bottom-[45%] min-h-[50px] left-[38.5%] rounded-lg rounded-t-3xl z-10"
+          className="absolute border min-w-[350px] p-2 text-black backdrop-blur-lg
+            bottom-[45%] min-h-[50px] left-[37.5%] rounded-lg rounded-t-3xl z-10"
         />
 
-        <div className="relative w-full h-[700px]">
-          <Image src="/C49Images/Kindness.JPG" fill alt="images" />
+        <div className="relative w-[730px] h-[700px]">
+          <Image src="/C49Images/cup.jpeg" fill alt="images" />
         </div>
 
-        <div className="text-center absolute bottom-0 left-[44%]">
+        <div className="text-center absolute bottom-[-10px] left-[44%]">
           <button
             onClick={generatePDF}
             className="text-white min-w-[150px] bg-violet-900 rounded-lg px-5 py-2 cursor-pointer"

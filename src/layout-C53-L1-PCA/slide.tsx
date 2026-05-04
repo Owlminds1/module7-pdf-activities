@@ -71,6 +71,14 @@ const Slide = () => {
         <h4 className="text-3xl capitalize font-bold text-center text-black">
 Gift card
         </h4>
+        <p className="text-xl font-bold text-center text-black my-2">
+          Your parents have given you a giftcard ($50) for your birthday.
+        </p>
+        <ul className="list-disc space-y-4 px-6 my-5">
+          <li className="text-black text-lg ">You can use it over a period of time.</li>
+          <li className="text-black text-lg ">You can purchase anything on a specific website for toys, stationary, books.</li>
+          <li className="text-black text-lg ">So you’ve to make wise choices so as to buy items you will need.</li>
+        </ul>
 
      
       </div>
@@ -92,6 +100,10 @@ Gift card
             
 
             <SwiperSlide>
+              <h4 className="text-xl capitalize py-5 font-bold text-center text-black">
+Create your list with pricing in this table.
+
+        </h4>
           <Table swiperRef={swiperRef} />
             </SwiperSlide>
           </Swiper>
